@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card shadow">
+
+<div class="card-header bg-success text-white">
+
+<h4>Edit Patient</h4>
+
+</div>
+
+<div class="card-body">
+
+<form method="POST">
+
+<div class="mb-3">
+<label>Full Name</label>
+<input type="text" name="fullname" value="{{patient.fullname}}" class="form-control" required>
+</div>
+
+<div class="mb-3">
+<label>Date of Birth</label>
+<input type="date" name="dob" value="{{ patient.dob }}" class="form-control" required>
+</div>
+
+<div class="mb-3">
+<label>Email</label>
+<input type="email" name="email" value="{{ patient.email }}" class="form-control" required>
+</div>
+
+<div class="mb-3">
+<label>Glucose</label>
+<input type="number" step="0.1" name="glucose" value="{{ patient.glucose }}" class="form-control" required>
+
+</div>
+
+<div class="mb-3">
+<label>Haemoglobin</label>
+<input type="number" step="0.1" name="haemoglobin" value="{{ patient.haemoglobin }}" class="form-control" required>
+</div>
+
+<div class="mb-3">
+
+<label>Cholesterol</label>
+
+<input type="number" step="0.1" name="cholesterol" value="{{ patient.cholesterol }}" class="form-control" required>
+
+</div>
+
+<button class="btn btn-primary">
+Save Patient
+</button>
+
+<a href="/" class="btn btn-secondary">
+Cancel
+</a>
+
+</form>
+</div>
+</div>
+{% endblock %}
